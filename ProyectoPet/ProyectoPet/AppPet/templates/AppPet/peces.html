@@ -1,0 +1,25 @@
+{% extends "AppPet/padre.html" %}
+
+{% load static %}
+
+    
+    {% block contenido2 %}
+
+        <h1 class="mb-1">PECES</h1>
+
+    {% endblock %}
+
+
+    {% block contenido %}
+
+        <form action = "/AppPet/peces" method="POST"> {% csrf_token %}
+
+            <p>ESPECIE: <input type="text" name="especie"> </p>
+           
+            <P>ES DE AGUA SALADA: <input type="checkbox" name="deAguaSalada" value="True"> </P>
+
+            <input type="submit" value="¡¡envio!!">
+
+        </form>
+
+    {% endblock %}

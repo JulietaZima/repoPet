@@ -1,0 +1,29 @@
+{% extends "AppPet/padre.html" %}
+
+{% load static %}
+
+
+    {% block contenido2 %}
+
+        <h1 class="mb-1">Formulario de Perros!!!</h1>
+
+    {% endblock %}
+
+
+
+    {% block contenido %}
+
+        <form action = "/AppPet/perrosFormulario" method="POST"> {% csrf_token %}
+
+            <p>RAZA: <input type="text" name="raza"> </p>
+            
+            <p>EDAD: <input type="number" name="edad"> </p>
+           
+            <P>ESTA CASTRADO: <input type="checkbox" name="esCastrado" value="True"> </P>
+
+
+            <input type="submit" value="¡¡envio!!">
+
+        </form>
+
+    {% endblock %}
